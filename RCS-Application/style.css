@@ -1,0 +1,252 @@
+@font-face {
+    font-family: FRTZQUAD;
+    src: url(FRTZQUAD.ttf);
+}
+
+body{
+	font-family: Arial, Helvetica, sans-serif;
+	background-color: white;
+	color: #002654;
+	font-size: 14px;
+}
+
+h2{
+	color: #002654;
+	font-size: 18px;
+	font-weight: 700;
+}
+
+.v-center{
+	display: flex;
+	align-items: center;
+}
+
+.bottomBorder{
+	border-bottom: 1px solid black;
+}
+
+input, select{
+	color: black;
+}
+
+.row{
+	margin-top: 5px;
+}
+
+#mainWrapper{
+	text-align: center;
+}
+
+.description{
+	font-size: 16px;
+	font-weight: 600;
+}
+
+#interfaceLevelThree{
+	margin: 100px -15px 0px;
+	padding: 20px;
+	border-top: 3px solid #002654;
+	border-bottom: 3px solid #002654;
+}
+
+#interfaceLevelThree:empty{
+	border: 0px solid white;
+}
+
+h1{
+	font-family: FRTZQUAD, Arial, Helvetica, sans-serif;
+	padding: 10px;
+	margin-top: 0px;
+	color: #002654;
+	font-weight: 700;
+}
+
+h1:not(:empty){
+	padding: 10px;
+	margin: 10px -15px;
+}
+
+header{
+	
+	margin: 0px;
+}
+
+.courseItem, .termItem{
+	margin: 5px;
+}
+
+.removeCourseOption, .removeTermOption{
+	border-radius: 50px;
+}
+
+.removeCourseOption:active, .removeTermOption:active{
+	box-shadow: 0px 0px 5px black;
+}
+
+// Interface Level Four
+
+#generateRCS{
+	margin: 20px 20px 0px 0px;
+}
+
+#notice{
+	position: absolute;
+	margin: 0 auto;
+	z-index: 9;
+	background-color: RGBA(0,0,0,.8);
+	color: white;
+	font-size: 36px;
+	width: 100%;
+	height: 100%;
+	top: 0px;
+	text-align: center;
+	padding-top: 200px;
+	text-decoration: blink;
+	padding-left: 150px;
+	padding-right: 150px;
+}
+
+.programData{
+	font-size: 16px;
+	font-weight: 600;
+}
+
+.schedule-main-data{
+	font-size: 14px;
+	font-weight: 400;
+}
+
+#interfaceLevelFour .termName{
+	font-size: 24px;
+	background-color: #002654;
+	font-weight: 700;
+	color: white;
+}
+
+#semesterUnitTotalWrap, #unitPrgrmRqmntWrapper{
+	background-color: #002654;
+	color: white;
+	border-top-right-radius: 5px;
+	font-size: 18px;
+	padding: 3px;
+	border: thin solid white;
+}
+
+#infoArea{
+	background-color: rgba(255,255,255,.9);
+	color: black;
+	max-width: 800px;
+	display: none;
+	position: absolute;
+	right: 0px;
+	top: 0px;
+	font-size:18px;
+	padding: 10px;
+	z-index: 10;
+}
+
+#interfaceLevelFour{
+	position: relative;
+}
+
+#interfaceLevelFour table, #interfaceLevelFour td, #interfaceLevelFour tr, #interfaceLevelFour th{
+	border: thin solid black;
+	padding: 10px;
+	background-color: white;
+	color: black;
+	line-height: 0;
+}
+
+#interfaceLevelFour table{
+	margin: 0 auto;
+	width: auto;
+	margin-bottom: 20px;
+	min-width: 400px;
+	border: 1px solid black;
+	position: relative;
+}
+
+#interfaceLevelFour .tableHeader{
+	font-size: 20px;
+	background-color: #002654;
+	color: white;
+	max-width: 600px;
+	margin: 0px auto;
+	margin-bottom: 10px;
+	text-align: left;
+	padding-left: 10px;
+}
+#warningLogsContainer:not(:empty){
+	background-color: white;
+	padding: 10px;
+	color: black;
+	max-width: 500px;
+}
+
+#interfaceLevelFour .termCourseWrappers{
+	min-height: 15px;
+	padding: 25px 0px;
+	height: 55px;
+}
+
+#interfaceLevelFour #newTermButton{
+	width: 600px;
+	border-style: dashed;
+	border-color: #002654;
+	border-width: 3px;
+	margin: 0 auto;
+}
+
+#interfaceLevelFour #newTermButton:hover{
+	cursor: pointer;
+}
+
+#interfaceLevelFour .scheduleTitle{
+	display: flex;
+	justify-content: space-between;
+	max-width: 1024px;
+	margin: 0 auto;
+}
+
+#interfaceLevelFour #dragImg{
+	position: absolute;
+	right: 50px;
+	top: 100px;
+}
+
+#interfaceLevelFour .singleCourseKill{
+	position: absolute;
+	right: -20px;
+}
+
+/*Sortable */
+
+.ui-sortable-handle:hover{
+	cursor: pointer;
+}
+.ui-sortable-helper{
+	padding: 50px;
+	height: 100px;
+}
+
+/********PRINT**************/
+
+@media print{
+
+	 h1,  #interfaceLevelOne,  #generateRCS,  button,  .description,  body #interfaceLevelTwo,  #interfaceLevelThree, #termButtonContainer{
+		display: none !important;
+	}
+	
+	body{
+		background-color: white;
+	}
+	
+	td{
+		font-size: 12px !important;
+	}
+	
+	*{
+		overflow: visible;
+	}
+
+}

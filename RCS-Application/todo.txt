@@ -1,0 +1,103 @@
+--------------General:
+
+deleteItem function is very fragile..
+
+Prevent term and course columns from moving after they are generated
+
+need to update termToRemove array will solve bug I think.
+
+Preventing user from changing terms when there are terms in the modification zone is getting hairy...
+
+To remove array items from the termToRemove array. okay. using Array.remove()
+
+Prevent user from creating recommended course sequence if there are no non-elective courses in program
+
+Should we have semester unit total if it's just always going to be the same?
+
+---------------BUGS:
+
+It's possible to line up term items non-linearly
+
+------------Improvements:
+
+Use different names for terms maybe
+
+----------Future Features:
+
+------
+
+Need to validate this line before doing stuff to it // creatorObject.response.schedules.length != false 
+
+
+JOSH
+
+Clear elements and variables properly
+Indicate Requirements
+
+ADRIENNE
+
+Pluralize Terms
+Take Further Electives and GE courses to equal X
+Allow users to see other schedules // working on it
+PDF in Excel Style Format // will just make table
+
+Need to clear Variable that checks avialble units to be schedule in comparison to units that need to be scheduled;
+I think it's called totalPossibleUnits;
+
+
+------------------------URGENT
+
+Visual
+Clearing everything properly
+Showing Logs
+Showing Alternate Schedules
+
+
+
+Calculation for how many units per semester a student should take for a certificate:'
+
+
+	Min Units to Meet Program Reqs               = M 
+	Units scheduled for this term                   = U 
+	Max Units for this term                           = X
+	Total Units Scheduled                            = T
+	Num Terms Scheduled                            = R
+	How many GE and elevtives total to take   = (M - T)
+Avg number of electives to take per term       = ((M - T) / R)
+  Available Units in term                              = (X - U)
+  Solution = solution
+	
+	if (  ((M - T) / R)  <=  (X - U) ){
+		solution =  ((M - T) / R)
+	}
+	else{
+	 solution = (X - U)
+	}
+
+	
+	Calculation for how many units per semester a student should take for a Major:
+	
+		if (  ((M - T) / R)  <=  (X - U) ){
+		solution =  ((M - T) / R)
+	}
+	else{
+	 solution = (X - U)
+	}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
